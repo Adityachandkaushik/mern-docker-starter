@@ -5,11 +5,9 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-COP
- 
-exit
-cd ~/projects/mern-docker-starter
+COPY . .
 
-cat > .env << 'EOF'
-PORT=5000
-MONGO_URL=mongodb://admin:qwerty@mongo:27017/
+EXPOSE 3000
+
+CMD ["npm", "start"]
+

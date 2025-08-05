@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   mongo:
     image: mongo
@@ -15,11 +16,7 @@ services:
     build: ./backend
     container_name: backend
     ports:
-      - "5000:5000"
-    environment:
-      - MONGO_URL=mongodb://admin:qwerty@mongo:27017/
-    volumes:
-      - ./backend:/app
+      - "3000:3000"
     depends_on:
       - mongo
 
