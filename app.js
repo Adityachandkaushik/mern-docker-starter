@@ -11,7 +11,7 @@ mongoose.connect('mongodb://admin:qwerty@mongo:27017', {
 })
 .then(() => console.log("✅ Connected to MongoDB"))
 .catch(err => console.error("❌ MongoDB connection error:", err));
-
+  
 // Example Route
 app.get('/', (req, res) => {
   res.send('Hello from Express!');
